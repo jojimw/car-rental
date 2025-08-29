@@ -65,24 +65,24 @@ export const FilterAccordionContent: React.FC = () => {
                   className="group text-base flex cursor-pointer items-center gap-2"
                   htmlFor={`make-${make}`}
                 >
-                  <button
-                    type="button"
-                    role="checkbox"
-                    aria-checked={selectedMakes.includes(make)}
-                    onClick={() => toggleMake(make)}
+                  <input
+                    type="checkbox"
+                    id={`make-${make}`}
+                    checked={selectedMakes.includes(make)}
+                    onChange={() => toggleMake(make)}
+                    className="hidden"
+                  />
+                  <span
                     className={`peer shrink-0 rounded-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-2 border-gray-300 shadow-sm h-6 w-6 ${
                       selectedMakes.includes(make)
                         ? "border-primary bg-primary text-white"
                         : ""
                     }`}
-                    id={`make-${make}`}
                   >
                     {selectedMakes.includes(make) && (
-                      <span className="flex items-center justify-center text-current">
-                        <CheckIcon className="h-5 w-5" />
-                      </span>
+                      <CheckIcon className="h-5 w-5" />
                     )}
-                  </button>
+                  </span>
                   <p className="text-base">{make}</p>
                 </label>
               ))}
@@ -110,24 +110,24 @@ export const FilterAccordionContent: React.FC = () => {
                   className="group text-base flex cursor-pointer items-center gap-2"
                   htmlFor={`color-${color}`}
                 >
-                  <button
-                    type="button"
-                    role="checkbox"
-                    aria-checked={selectedColors.includes(color)}
-                    onClick={() => toggleColor(color)}
+                  <input
+                    type="checkbox"
+                    id={`color-${color}`}
+                    checked={selectedColors.includes(color)}
+                    onChange={() => toggleColor(color)}
+                    className="hidden"
+                  />
+                  <span
                     className={`peer shrink-0 rounded-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-2 border-gray-300 shadow-sm h-6 w-6 ${
                       selectedColors.includes(color)
                         ? "border-primary bg-primary text-white"
                         : ""
                     }`}
-                    id={`color-${color}`}
                   >
                     {selectedColors.includes(color) && (
-                      <span className="flex items-center justify-center text-current">
-                        <CheckIcon className="h-5 w-5" />
-                      </span>
+                      <CheckIcon className="h-5 w-5" />
                     )}
-                  </button>
+                  </span>
                   <p className="text-base">{color}</p>
                 </label>
               ))}

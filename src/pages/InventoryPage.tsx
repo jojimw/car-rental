@@ -71,7 +71,7 @@ export const InventoryPage: React.FC = () => {
         </div>
       </header>
 
-      {/* Mobile Filter Bar */}
+      {/* Filter Bar (for mobile and tablet view) */}
       <MobileFilterBar onOpenModal={() => setIsFilterModalOpen(true)} />
 
       {/* Main Content */}
@@ -101,7 +101,7 @@ export const InventoryPage: React.FC = () => {
       {/* ZIP Code Modal */}
       <ZipCodeModal isOpen={isModalOpen} onClose={closeModal} />
 
-      {/* Filter Modal */}
+      {/* Filter Modal (For Mobile and Tablet view) */}
       <FilterModal
         isOpen={isFilterModalOpen}
         onClose={() => setIsFilterModalOpen(false)}
