@@ -6,6 +6,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/car-rental-react-app',
   plugins: [
     react(),
     tailwindcss(),
