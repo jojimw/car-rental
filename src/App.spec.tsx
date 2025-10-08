@@ -7,8 +7,8 @@ describe("App Component", () => {
     render(<App />);
 
     // Should render the inventory page with ZIP code modal or welcome message
-    const welcomeText = screen.queryByText(/Welcome to Flexcar/i);
-    const modalText = screen.queryByText(/Find Flexcars near you/i);
+    const welcomeText = screen.queryByText(/Welcome to UrbanDrive/i);
+    const modalText = screen.queryByText(/Find rental cars near you/i);
 
     // Should have either welcome state or the modal
     expect(welcomeText || modalText).toBeTruthy();

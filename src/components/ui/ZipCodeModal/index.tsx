@@ -50,7 +50,7 @@ export const ZipCodeModal: React.FC<ZipCodeModalProps> = ({
         <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-6 mx-4">
           <div className="flex justify-between items-center mb-6">
             <Dialog.Title className="text-2xl font-semibold text-gray-900">
-              Find Flexcars near you
+              Find rental cars near you
             </Dialog.Title>
             <Dialog.Close className="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer">
               <svg

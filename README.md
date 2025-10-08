@@ -1,6 +1,6 @@
-# Flexcar Frontend
+# UrbanDrive Frontend
 
-A modern React application for browsing and filtering Flexcar's vehicle inventory with a responsive design optimized for desktop, tablet, and mobile devices.
+A modern React application for browsing and filtering UrbanDrive's vehicle inventory with a responsive design optimized for desktop, tablet, and mobile devices.
 
 ## Getting Started
 

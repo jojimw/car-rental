@@ -106,7 +106,7 @@ describe("ZIP Code Validation Utilities", () => {
 
     describe("Invalid ZIP code handling", () => {
       it("returns validation message for invalid format", () => {
-        const expectedMessage = "Please enter a valid US zip code.";
+        const expectedMessage = "Please enter a valid zip code.";
 
         expect(getZipCodeErrorMessage("1234")).toBe(expectedMessage);
         expect(getZipCodeErrorMessage("123456")).toBe(expectedMessage);
@@ -118,7 +118,7 @@ describe("ZIP Code Validation Utilities", () => {
       });
 
       it("returns validation message for partially entered codes", () => {
-        const expectedMessage = "Please enter a valid US zip code.";
+        const expectedMessage = "Please enter a valid zip code.";
 
         expect(getZipCodeErrorMessage("1")).toBe(expectedMessage);
         expect(getZipCodeErrorMessage("12")).toBe(expectedMessage);
@@ -127,7 +127,7 @@ describe("ZIP Code Validation Utilities", () => {
       });
 
       it("returns validation message for malformed ZIP+4", () => {
-        const expectedMessage = "Please enter a valid US zip code.";
+        const expectedMessage = "Please enter a valid zip code.";
 
         expect(getZipCodeErrorMessage("12345-678")).toBe(expectedMessage);
         expect(getZipCodeErrorMessage("1234-6789")).toBe(expectedMessage);
@@ -138,7 +138,7 @@ describe("ZIP Code Validation Utilities", () => {
     describe("Message consistency", () => {
       it("uses consistent error messages", () => {
         const requiredMessage = "ZIP code is required";
-        const invalidMessage = "Please enter a valid US zip code.";
+        const invalidMessage = "Please enter a valid zip code.";
 
         // Required cases
         expect(getZipCodeErrorMessage("")).toBe(requiredMessage);

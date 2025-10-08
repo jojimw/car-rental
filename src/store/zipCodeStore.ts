@@ -25,7 +25,7 @@ export const useZipCodeStore = create<ZipCodeStore>()(
       },
     }),
     {
-      name: "flexcar-zipcode",
+      name: "zipcode",
       partialize: state => ({ zipCode: state.zipCode }),
     }
   )

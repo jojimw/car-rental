@@ -40,6 +40,6 @@ describe("ZipCodeStore", () => {
 
   it("persists ZIP code to localStorage", () => {
     useZipCodeStore.getState().setZipCode("12345");
-    expect(localStorage.getItem("flexcar-zipcode")).toContain("12345");
+    expect(localStorage.getItem("zipcode")).toContain("12345");
   });
 });

@@ -36,7 +36,7 @@ describe("ZipCodeModal Component", () => {
   it("renders modal when isOpen is true", () => {
     render(<ZipCodeModal isOpen onClose={mockOnClose} />);
 
-    expect(screen.getByText("Find Flexcars near you")).toBeInTheDocument();
+    expect(screen.getByText("Find rental cars near you")).toBeInTheDocument();
     expect(
       screen.getByText(
         "Enter your ZIP code to see accurate availability and delivery options in your area."
@@ -48,7 +48,7 @@ describe("ZipCodeModal Component", () => {
     render(<ZipCodeModal isOpen={false} onClose={mockOnClose} />);
 
     expect(
-      screen.queryByText("Find Flexcars near you")
+      screen.queryByText("Find rental cars near you")
     ).not.toBeInTheDocument();
   });
 
@@ -81,7 +81,7 @@ describe("ZipCodeModal Component", () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText("Please enter a valid US zip code.")
+        screen.getByText("Please enter a valid zip code.")
       ).toBeInTheDocument();
     });
   });

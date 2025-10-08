@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import LocationIcon from "@/assets/icons/location-icon.svg";
+import UrbanDriveLogo from "@/assets/images/urban-drive-logo.png";
 import { AccordionFilterSidebar } from "@/components/filters/AccordionFilterSidebar";
 import { FilterModal } from "@/components/filters/FilterModal";
 import { MobileFilterBar } from "@/components/filters/MobileFilterBar";
@@ -9,8 +11,6 @@ import { ZipCodeModal } from "@/components/ui/ZipCodeModal";
 import { VehicleGrid } from "@/components/vehicle/VehicleGrid";
 import { useVehicleStore } from "@/store/vehicleStore";
 import { useZipCodeStore } from "@/store/zipCodeStore";
-import FlexcarLogo from "../assets/icons/flexcar-logo.svg";
-import LocationIcon from "../assets/icons/location-icon.svg";
 
 export const InventoryPage: React.FC = () => {
   const { zipCode, isModalOpen, openModal, closeModal, hasValidZipCode } =
@@ -37,7 +37,7 @@ export const InventoryPage: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <EmptyState
-          title="Welcome to Flexcar"
+          title="Welcome to UrbanDrive"
           description="Enter your ZIP code to start browsing available vehicles in your area."
           actionText="Enter ZIP Code"
           onAction={handleChangeLocation}
@@ -52,9 +52,11 @@ export const InventoryPage: React.FC = () => {
         <div className="flex w-full flex-col justify-center px-[24px] max-w-[1440px] pr-[8px] mx-auto">
           <nav className="flex w-full items-center justify-between py-[16px] sm:py-[24px]">
             <div className="flex flex-row items-center justify-center gap-4">
-              <div className="h-[40px] w-[107px]">
-                <FlexcarLogo />
-              </div>
+              <img
+                src={UrbanDriveLogo}
+                alt="Urban Drive"
+                className="h-[80px]"
+              />
               <button
                 onClick={handleChangeLocation}
                 className="p-0 m-0 cursor-pointer group inline-flex h-auto w-fit max-w-full flex-shrink items-center justify-center gap-2 whitespace-nowrap border border-gray-200 py-2 text-sm font-medium transition-all hover:border-gray-300 hover:bg-gray-200 shadow-none border-none px-3 bg-transparent md:bg-gray-100 rounded-[8px] text-gray-900"

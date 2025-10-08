@@ -10,11 +10,15 @@ export const isValidUSZipCode = (zipCode: string): boolean => {
   // Check for 5-digit format
   const fiveDigitPattern = /^\d{5}$/;
 
+  // Check for 6-digit format
+  const sixDigitPattern = /^\d{6}$/;
+
   // Check for 5+4 format (e.g., 12345-6789)
   const nineDigitPattern = /^\d{5}-\d{4}$/;
 
   return (
     fiveDigitPattern.test(cleanedZipCode) ||
+    sixDigitPattern.test(cleanedZipCode) ||
     nineDigitPattern.test(cleanedZipCode)
   );
 };
@@ -27,5 +31,5 @@ export const isValidUSZipCode = (zipCode: string): boolean => {
 export const getZipCodeErrorMessage = (zipCode: string): string => {
   if (!zipCode || zipCode.trim().length === 0) return "ZIP code is required";
 
-  return "Please enter a valid US zip code.";
+  return "Please enter a valid zip code.";
 };
